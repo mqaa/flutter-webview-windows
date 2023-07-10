@@ -74,7 +74,7 @@ endif()
 apply_standard_settings(${PLUGIN_NAME})
 if (MSVC AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 19.29.30129 AND CMAKE_VERSION VERSION_GREATER 3.20.3)
   # CMake 3.20.4+
-  target_compile_features(${PLUGIN_NAME} PUBLIC cxx_std_23) # ensure /std:c++latest for std::format
+  target_compile_features(${PLUGIN_NAME} PUBLIC cxx_std_20) # ensure /std:c++latest for std::format
 else()
   target_compile_features(${PLUGIN_NAME} PUBLIC cxx_std_20) # ensure /std:c++latest for std::format
 endif()
